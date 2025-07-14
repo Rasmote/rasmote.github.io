@@ -24,21 +24,62 @@
 
     <section class="contents">
         <h2>🛠 Projects</h2>
-        <div class="project">
-            <h3>NestJS CRUD API</h3>
-            <p>사용자 정보를 등록/조회/수정/삭제하는 백엔드 API입니다.</p>
-            <ul>
-                <li>🔗 <a href="https://github.com/yourusername/nest-crud-project" target="_blank">GitHub Repository</a>
-                </li>
-                <li>💬 기술 스택: NestJS, TypeORM, PostgreSQL</li>
-            </ul>
+
+
+        <div class="project-box">
+            <div class="project-title">
+                NestJS CRUD API
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="project-details">
+                <p>사용자 정보를 등록/조회/수정/삭제하는 백엔드 API입니다.</p>
+                <ul>
+                    <li>🔗 <a href="https://github.com/Rasmote/memo-archive" target="_blank">GitHub Repository</a></li>
+                    <li>💬 기술 스택: NestJS, TypeORM, PostgreSQL</li>
+                </ul>
+            </div>
         </div>
-        <!-- 다른 프로젝트들도 여기에 추가 가능 -->
+
+        <div class="project-box">
+            <div class="project-title">
+                양식
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="project-details">
+                <p>양식</p>
+                <ul>
+                    <li>🔗 <a href="https://github.com/Rasmote/memo-archive" target="_blank">양식 1</a></li>
+                    <li>💬 양식 2</li>
+                </ul>
+            </div>
+        </div>
+
+
     </section>
 
     <footer>
         <p>&copy; 2025 Rasmote. All rights reserved.</p>
     </footer>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const projectBoxes = document.querySelectorAll(".project-box");
+
+        projectBoxes.forEach((box) => {
+            const title = box.querySelector(".project-title");
+            const icon = box.querySelector(".toggle-icon");
+
+            title.addEventListener("click", () => {
+                const isOpen = box.classList.contains("open");
+
+                // open 클래스 토글
+                box.classList.toggle("open", !isOpen);
+
+            });
+        });
+    });
+</script>
+
 
 </html>
